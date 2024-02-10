@@ -1,0 +1,7 @@
+- name: Package installation
+  hosts: linux
+  tasks:
+    - name: install wget
+      ansible.builtin.yum:
+        name: wget
+        state: present
