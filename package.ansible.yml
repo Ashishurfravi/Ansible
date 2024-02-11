@@ -1,7 +1,7 @@
 - name: Package installation
   hosts: linux
   gather_facts: no
-  become:: true
+  become: true
 
   tasks:
     - name: install wget
