@@ -2,11 +2,9 @@
   hosts: linux
   gather_facts: no
   become:: true
+
   tasks:
     - name: install wget
-      ansible.builtin.yum:
+      ansible.builtin.package:
         name: wget
         state: present
-  tasks:
-    - name: install httpd
-    
