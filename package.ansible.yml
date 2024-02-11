@@ -1,10 +1,16 @@
+---
 - name: Package installation
   hosts: linux
-  gather_facts: no
+  gather_facts: false
   become: true
 
   tasks:
     - name: install wget
       ansible.builtin.package:
-        name: wget
+        name: wgets
         state: present
+
+    - name: install httpd
+      ansible.builtin.package:
+        name: httpd
+        state: latest

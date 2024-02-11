@@ -1,0 +1,9 @@
+---
+- name: Playbook to run on windows 11 
+  gather_facts: false
+
+  tasks:
+    - name: task to copy test.txt from D to E drive
+      ansible.windows.win_copy:
+        src: D:\test.txt
+        dest: E:\test_passed.txt
