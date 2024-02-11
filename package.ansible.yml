@@ -1,7 +1,12 @@
 - name: Package installation
   hosts: linux
+  gather_facts: no
+  become:: true
   tasks:
     - name: install wget
       ansible.builtin.yum:
         name: wget
         state: present
+  tasks:
+    - name: install httpd
+    
